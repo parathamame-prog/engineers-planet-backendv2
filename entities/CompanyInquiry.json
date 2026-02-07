@@ -1,0 +1,46 @@
+{
+    "name": "CompanyInquiry",
+    "type": "object",
+    "properties": {
+      "company_name": {
+        "type": "string",
+        "description": "Name of the company"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Company contact email"
+      },
+      "engineering_discipline": {
+        "type": "string",
+        "enum": [
+          "Electronic",
+          "Mechanical",
+          "Civil",
+          "Software",
+          "Automation",
+          "Robotics"
+        ],
+        "description": "Type of engineer required"
+      },
+      "message": {
+        "type": "string",
+        "description": "Additional details about the requirement"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "contacted",
+          "in_progress",
+          "closed"
+        ],
+        "default": "new"
+      }
+    },
+    "required": [
+      "company_name",
+      "email",
+      "engineering_discipline"
+    ]
+  }
